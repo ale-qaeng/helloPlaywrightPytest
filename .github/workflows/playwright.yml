@@ -21,7 +21,7 @@ jobs:
           python -m pip install --upgrade pip
           pip install -r requirements.txt
       - name: Run your tests
-        run: pytest helloPlaywright.py
+        run: pytest tests/helloPlaywright.py
         env:
           # This might depend on your test-runner
           PLAYWRIGHT_TEST_BASE_URL: ${{ github.event.deployment_status.target_url }}
